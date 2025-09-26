@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="StokYonetimSistemi.Views.UrunGirisiView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="800">
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Ürün Adı:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtUrunAdi" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Barkod:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtBarkod" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Açıklama:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtUrunAciklama" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Kategori:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <ComboBox x:Name="cbKategori" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Kritik Stok:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtKritikStok" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Miktar:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtMiktar" Grid.Row="5" Grid.Column="1" Margin="5"/>
+
+        <Button Content="Ürünü Kaydet" Grid.Row="6" Grid.ColumnSpan="2" Margin="5" Padding="10"
+                Click="BtnUrunKaydet_Click" HorizontalAlignment="Center"/>
+    </Grid>
+</UserControl>

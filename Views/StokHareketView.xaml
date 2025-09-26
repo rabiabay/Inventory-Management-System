@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="StokYonetimSistemi.Views.StokHareketView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="1000">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Form Alanı -->
+        <StackPanel Orientation="Vertical" Margin="0,0,0,20">
+            <TextBlock Text="Ürün Seçin:" FontWeight="Bold"/>
+            <ComboBox x:Name="cmbUrunler" Width="300" Margin="0,5"/>
+
+            <TextBlock Text="İşlem Türü:" FontWeight="Bold" Margin="0,10,0,0"/>
+            <ComboBox x:Name="cmbIslemTuru" Width="300" Margin="0,5">
+                <ComboBoxItem Content="Giriş"/>
+                <ComboBoxItem Content="Çıkış"/>
+            </ComboBox>
+
+            <TextBlock Text="Miktar:" FontWeight="Bold" Margin="0,10,0,0"/>
+            <TextBox x:Name="txtMiktar" Width="300" Margin="0,5"/>
+
+            <TextBlock Text="Açıklama:" FontWeight="Bold" Margin="0,10,0,0"/>
+            <TextBox x:Name="txtAciklama" Width="300" Margin="0,5"/>
+
+            <Button Content="Kaydet" Click="BtnKaydet_Click" Width="150" Margin="0,20,0,0" Background="#2ECC71" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Listeleme Alanı -->
+        <DataGrid x:Name="dgHareketler" Grid.Row="1" AutoGenerateColumns="True" IsReadOnly="True"/>
+    </Grid>
+</UserControl>

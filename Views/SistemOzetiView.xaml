@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="StokYonetimSistemi.Views.SistemOzetiView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Loaded="UserControl_Loaded"
+             Background="White">
+
+    <StackPanel Margin="30">
+        <TextBlock Text="📊 Sistem Özeti" FontSize="28" FontWeight="Bold" Margin="0,0,0,30"/>
+
+        <UniformGrid Columns="2" Rows="2" Margin="0,0,0,10">
+            <Border BorderBrush="Gray" BorderThickness="1" Padding="20" Margin="10" CornerRadius="8" Background="#F9F9F9">
+                <StackPanel>
+                    <TextBlock Text="Toplam Ürün Sayısı" FontSize="18"/>
+                    <TextBlock x:Name="txtUrunSayisi" FontSize="26" FontWeight="Bold" Foreground="DarkGreen"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderBrush="Gray" BorderThickness="1" Padding="20" Margin="10" CornerRadius="8" Background="#F9F9F9">
+                <StackPanel>
+                    <TextBlock Text="Toplam Sipariş Miktarı" FontSize="18"/>
+                    <TextBlock x:Name="txtSiparisMiktari" FontSize="26" FontWeight="Bold" Foreground="DarkBlue"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderBrush="Gray" BorderThickness="1" Padding="20" Margin="10" CornerRadius="8" Background="#F9F9F9">
+                <StackPanel>
+                    <TextBlock Text="Toplam Kullanıcı Sayısı" FontSize="18"/>
+                    <TextBlock x:Name="txtKullaniciSayisi" FontSize="26" FontWeight="Bold" Foreground="DarkSlateGray"/>
+                </StackPanel>
+            </Border>
+        </UniformGrid>
+    </StackPanel>
+</UserControl>

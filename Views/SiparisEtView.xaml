@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="StokYonetimSistemi.Views.SiparisEtView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="Auto" Width="Auto">
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Ürün -->
+        <TextBlock Text="Ürün:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <ComboBox x:Name="cbUrunler" Grid.Row="0" Grid.Column="1" Margin="5"
+                  DisplayMemberPath="UrunAdi" SelectedValuePath="UrunID"/>
+
+        <!-- Miktar -->
+        <TextBlock Text="Miktar:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtMiktar" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <!-- Buton -->
+        <Button Content="Siparişi Ver" Grid.Row="2" Grid.ColumnSpan="2" Margin="5" Padding="10"
+                Click="BtnSiparisVer_Click" HorizontalAlignment="Center"/>
+    </Grid>
+</UserControl>

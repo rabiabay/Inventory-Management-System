@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="StokYonetimSistemi.Views.LogKayitlariView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Loaded="UserControl_Loaded">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="📝 Log Kayıtları" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+            <DataGrid x:Name="dgLoglar" AutoGenerateColumns="True" Height="500"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

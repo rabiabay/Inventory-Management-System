@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="StokYonetimSistemi.Views.SatisView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Ürün seçimi -->
+            <RowDefinition Height="Auto"/>
+            <!-- Miktar -->
+            <RowDefinition Height="Auto"/>
+            <!-- Açıklama -->
+            <RowDefinition Height="Auto"/>
+            <!-- Buton -->
+            <RowDefinition Height="*"/>
+            <!-- Stok hareketleri -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Ürün:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+        <ComboBox x:Name="cbUrunler" Grid.Row="0" Grid.Column="1" Margin="0,5" />
+
+        <TextBlock Text="Miktar:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+        <TextBox x:Name="txtMiktar" Grid.Row="1" Grid.Column="1" Margin="0,5" />
+
+        <TextBlock Text="Açıklama:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
+        <TextBox x:Name="txtAciklama" Grid.Row="2" Grid.Column="1" Margin="0,5" />
+
+        <Button Content="Satışı Onayla" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,10,0,10" Padding="10"
+                HorizontalAlignment="Center" Width="150" Height="40" Click="BtnSatisOnayla_Click"/>
+
+        <!-- Stok Hareketleri Listesi -->
+        <DataGrid x:Name="dgStokHareketleri" Grid.Row="4" Grid.ColumnSpan="2" AutoGenerateColumns="False" Margin="0,10,0,0" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ürün Adı" Binding="{Binding UrunAdi}" Width="*"/>
+                <DataGridTextColumn Header="Hareket Tipi" Binding="{Binding HareketTipi}" Width="120"/>
+                <DataGridTextColumn Header="Miktar" Binding="{Binding Miktar}" Width="100"/>
+                <DataGridTextColumn Header="Tarih" Binding="{Binding Tarih}" Width="150"/>
+                <DataGridTextColumn Header="Açıklama" Binding="{Binding Aciklama}" Width="200"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

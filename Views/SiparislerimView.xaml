@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="StokYonetimSistemi.Views.SiparislerimView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+    <Grid Margin="20">
+        <DataGrid x:Name="dgSiparisler"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Sipariş ID" Binding="{Binding SiparisID}" Width="*" />
+                <DataGridTextColumn Header="Tarih" Binding="{Binding Tarih}" Width="*" />
+                <DataGridTextColumn Header="Durum" Binding="{Binding Durum}" Width="*" />
+                <DataGridTextColumn Header="Kullanıcı ID" Binding="{Binding KullaniciID}" Width="*" />
+                <DataGridTemplateColumn Header="İşlem" Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="İptal Et"
+                                    Click="BtnIptalEt_Click"
+                                    Padding="5,2"
+                                    FontWeight="Bold"
+                                    Background="Crimson"
+                                    Foreground="White"
+                                    Tag="{Binding}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
