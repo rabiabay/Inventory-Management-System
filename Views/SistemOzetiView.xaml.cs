@@ -18,16 +18,15 @@ namespace StokYonetimSistemi.Views
 
         private void UserControl_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            // 1. Toplam Ürün Sayısı
+           
             txtUrunSayisi.Text = _context.Urun.Count().ToString();
 
-            // 2. Kritik Stoklu Ürün Sayısı
+           
             
 
-            // 3. Toplam Sipariş Miktarı (Miktar olarak düzeltildi)
             txtSiparisMiktari.Text = _context.SiparisDetaylari.Sum(sd => sd.Miktar).ToString();
 
-            // 4. Kullanıcı Sayısı
+            
             txtKullaniciSayisi.Text = _context.Kullanici.Count().ToString();
         }
     }

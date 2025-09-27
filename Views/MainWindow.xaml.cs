@@ -8,7 +8,7 @@ namespace StokYonetimSistemi
         {
             InitializeComponent();
 
-            // Örnek: başlangıç sayfası olarak AdminPanel yükleniyor
+            
             MainGrid.Children.Clear();
             MainGrid.Children.Add(new Views.AdminPanel());
 

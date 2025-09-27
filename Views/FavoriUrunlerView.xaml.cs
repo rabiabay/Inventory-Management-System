@@ -16,7 +16,7 @@ namespace StokYonetimSistemi.Views
             InitializeComponent();
             _context = new StokYonetimContext(VeritabaniBaglantisi.BaglantiGetir());
 
-            int aktifKullaniciID = 3; // Giriş yapan kullanıcı ID'si
+            int aktifKullaniciID = 3; 
             EnCokSatilaniFavoriyeEkle(aktifKullaniciID);
             YukleFavoriler(aktifKullaniciID);
         }

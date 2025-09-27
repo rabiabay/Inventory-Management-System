@@ -55,12 +55,12 @@ namespace StokYonetimSistemi.Views
             var hareket = new StokHareketi
             {
                 UrunID = urunID,
-                DepoID = 1, // Giriş yapan kullanıcının deposu ileride dinamik olabilir
+                DepoID = 1, 
                 HareketTipi = "Cikis",
                 Miktar = miktar,
                 Tarih = DateTime.Now,
                 Aciklama = txtAciklama.Text,
-                KullaniciID = 1 // Giriş yapan kullanıcıdan alınabilir
+                KullaniciID = 1 
             };
             _context.StokHareketi.Add(hareket);
             _context.SaveChanges();

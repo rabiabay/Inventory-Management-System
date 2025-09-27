@@ -3,7 +3,7 @@ using System.Windows.Controls;
 using Microsoft.EntityFrameworkCore;
 using StokYonetimSistemi.Data;
 using StokYonetimSistemi.Helpers;
-using StokYonetimSistemi.Models; // KritikUrun modelini kullanacağız
+using StokYonetimSistemi.Models; 
 
 namespace StokYonetimSistemi.Views
 {
@@ -19,9 +19,9 @@ namespace StokYonetimSistemi.Views
         {
             using var context = new StokYonetimContext(VeritabaniBaglantisi.BaglantiGetir());
 
-            // Kritik ürünleri view'den çekiyoruz
+            
             var liste = context
-                .Set<KritikUrun>() // <--- Burada artık modelimizi kullanıyoruz
+                .Set<KritikUrun>() 
                 .FromSqlRaw("SELECT * FROM vw_KritikStoklar")
                 .ToList();
 

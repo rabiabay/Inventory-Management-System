@@ -45,14 +45,14 @@ namespace StokYonetimSistemi
                 return;
             }
 
-            // ✅ Tüm roller için geçerli olacak şekilde aktif kullanıcı bilgisi atanıyor
+           
             AktifKullanici.KullaniciID = kullanici.KullaniciID;
             AktifKullanici.KullaniciAdi = kullanici.KullaniciAdi;
 
-            // ✅ Giriş yapan kullanıcı loga yazılıyor
+            
             LogService.LogEkle("Kullanici", "Giriş", kullanici.KullaniciID);
 
-            // ✅ Rol kontrolü ile panele yönlendirme
+            
             if (kullanici.RolID == 1)
             {
                 new AdminPanel().Show();

@@ -20,7 +20,7 @@ namespace StokYonetimSistemi.Views
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            // Sayfa ilk açıldığında boş kalabilir
+            
         }
 
         private void BtnKritik_Click(object sender, RoutedEventArgs e)
@@ -74,7 +74,7 @@ namespace StokYonetimSistemi.Views
         {
             var liste = _context.Siparisler
                 .Include(s => s.Tedarikci)
-                .GroupBy(s => s.Tedarikci.FirmaAdi) // Tedarikçi adını burada düzelttik
+                .GroupBy(s => s.Tedarikci.FirmaAdi) 
                 .Select(g => new { Tedarikci = g.Key, SiparisSayisi = g.Count() })
                 .ToList();
 
@@ -87,7 +87,7 @@ namespace StokYonetimSistemi.Views
 
             var liste = _context.StokHareketi
                 .Include(sh => sh.Urun)
-                .Where(sh => sh.Tarih >= son30gun) // Giriş tipi yerine sadece tarih filtresi
+                .Where(sh => sh.Tarih >= son30gun) 
                 .Select(sh => new { sh.Urun.UrunAdi, sh.Tarih, sh.Miktar })
                 .ToList();
 

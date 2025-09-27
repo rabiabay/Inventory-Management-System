@@ -78,7 +78,7 @@ namespace StokYonetimSistemi.Views
                 HareketTipi = "Giris",
                 Miktar = miktar,
                 Tarih = DateTime.Now,
-                Aciklama = "", // Açıklama kısmı kaldırıldı
+                Aciklama = "", 
                 KullaniciID = 1
             };
             _context.StokHareketi.Add(hareket);

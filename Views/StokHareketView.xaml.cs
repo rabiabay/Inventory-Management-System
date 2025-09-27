@@ -10,7 +10,7 @@ namespace StokYonetimSistemi.Views
 {
     public partial class StokHareketView : UserControl
     {
-        private int depoId = 1; // Giriş yapan kullanıcıdan alınabilir
+        private int depoId = 1; 
 
         public StokHareketView()
         {
@@ -47,7 +47,7 @@ namespace StokYonetimSistemi.Views
 
             using var context = new StokYonetimContext(VeritabaniBaglantisi.BaglantiGetir());
 
-            // 1. Hareket kaydı
+            
             var hareket = new StokHareketi
             {
                 UrunID = urunId,
@@ -56,11 +56,11 @@ namespace StokYonetimSistemi.Views
                 Miktar = miktar,
                 Tarih = DateTime.Now,
                 Aciklama = aciklama,
-                KullaniciID = 1 // Şimdilik sabit, giriş yapan kullanıcıdan alınabilir
+                KullaniciID = 1 
             };
             context.StokHareketi.Add(hareket);
 
-            // 2. Stok güncellemesi
+            
             var stok = context.Stok.FirstOrDefault(s => s.UrunID == urunId && s.DepoID == depoId);
             if (stok == null)
             {

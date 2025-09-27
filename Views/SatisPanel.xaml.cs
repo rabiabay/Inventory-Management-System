@@ -12,14 +12,14 @@ namespace StokYonetimSistemi.Views
 
         private void BtnUrunSatis_Click(object sender, RoutedEventArgs e)
         {
-            // Ürün satış ekranını yükle
+            
             SatisView satisView = new SatisView();
             SatisContent.Content = satisView;
         }
 
         private void BtnStoklariGor_Click(object sender, RoutedEventArgs e)
         {
-            // Stokları listeleyen View'u yükle
+            
             SatisContent.Content = new SatisStokGoruntuleView();
         }
 
@@ -62,7 +62,7 @@ namespace StokYonetimSistemi.Views
 
         private void BtnFaturaGecmisi_Click(object sender, RoutedEventArgs e)
         {
-            // Fatura Geçmişi ekranını yükle
+           
             SatisContent.Content = new FaturaGecmisiView();
         }
 
@@ -72,7 +72,7 @@ namespace StokYonetimSistemi.Views
         }
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            // İlk açılışta "Ürün Satışı" ekranı yüklensin
+            
             BtnUrunSatis_Click(null, null);
         }
 

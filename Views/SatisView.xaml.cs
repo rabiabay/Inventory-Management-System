@@ -34,7 +34,7 @@ namespace StokYonetimSistemi.Views
         private void StokHareketleriniYukle()
         {
             var hareketler = _context.StokHareketi
-                .Where(h => h.HareketTipi == "Cikis" && h.KullaniciID == 3)  // Sadece satış hareketleri
+                .Where(h => h.HareketTipi == "Cikis" && h.KullaniciID == 3) 
                 .Select(h => new StokHareketViewModel
                 {
                     UrunAdi = h.Urun.UrunAdi,
@@ -104,7 +104,7 @@ namespace StokYonetimSistemi.Views
             txtMiktar.Clear();
             txtAciklama.Clear();
 
-            StokHareketleriniYukle(); // Listeyi güncelle
+            StokHareketleriniYukle(); 
         }
     }
 

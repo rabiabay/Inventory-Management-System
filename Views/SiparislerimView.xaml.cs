@@ -42,10 +42,10 @@ namespace StokYonetimSistemi.Views
                 return;
             }
 
-            // Durumu değiştir
+            
             siparis.Durum = "İptal Edildi";
             _context.SaveChanges();
-            SiparisleriYenile(); // listeyi yenile
+            SiparisleriYenile(); 
         }
     }
 }

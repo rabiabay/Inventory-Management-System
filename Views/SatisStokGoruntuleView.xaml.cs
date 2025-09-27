@@ -21,7 +21,7 @@ namespace StokYonetimSistemi.Views
         {
             var satisStoklari = _context.Stok
                 .Include(s => s.Urun)
-                .Where(s => s.DepoID == 2) // 2 = Satış Paneli DepoID'si
+                .Where(s => s.DepoID == 2) 
                 .ToList();
 
             dgSatisStoklar.ItemsSource = satisStoklari;

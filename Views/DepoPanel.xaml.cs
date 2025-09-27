@@ -54,8 +54,8 @@ namespace StokYonetimSistemi.Views
        
         private void BtnSiparisiGonder_Click(object sender, RoutedEventArgs e)
         {
-            // Burada siparişi gönderme işlemi yapılacak
-            // Örnek:
+            
+            
             MessageBox.Show("Sipariş gönderme işlemi bu methoda eklenecek.");
         }
 

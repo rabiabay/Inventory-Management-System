@@ -55,7 +55,7 @@ namespace StokYonetimSistemi.Views
                 TedarikciID = tedarikciID,
                 Tarih = DateTime.Now,
                 Durum = "Hazırlanıyor",
-                KullaniciID = AktifKullanici.KullaniciID // ✅ aktif kullanıcıdan al
+                KullaniciID = AktifKullanici.KullaniciID 
             };
 
             try

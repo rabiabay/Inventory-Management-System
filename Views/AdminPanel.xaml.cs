@@ -10,7 +10,7 @@ namespace StokYonetimSistemi.Views
         {
             InitializeComponent();
 
-            // Açılışta Sistem Özeti yüklensin
+            
             AnaPanelIcerik.Content = new SistemOzetiView();
         }
 
@@ -21,7 +21,7 @@ namespace StokYonetimSistemi.Views
 
         private void BtnSistemOzeti_Click(object sender, RoutedEventArgs e)
         {
-            AnaPanelIcerik.Content = new SistemOzetiView(); // ✅ Gerçek sistem özeti yükleniyor
+            AnaPanelIcerik.Content = new SistemOzetiView(); 
         }
 
         private void BtnLogKayitlari_Click(object sender, RoutedEventArgs e)
@@ -32,11 +32,11 @@ namespace StokYonetimSistemi.Views
 
         private void BtnCikis_Click(object sender, RoutedEventArgs e)
         {
-            // Giriş ekranını aç
+            
             var girisEkrani = new LoginWindow();
             girisEkrani.Show();
 
-            // Admin paneli kapat
+            
             this.Close();
         }
 

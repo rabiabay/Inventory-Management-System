@@ -45,7 +45,7 @@ namespace StokYonetimSistemi.Views
             int urunId = siparisDetay.UrunID;
             int miktar = siparisDetay.Miktar;
 
-            // 🔽 1) DEPODAN DÜŞÜR (DepoID = 1)
+            
             var depoStok = _context.Stok
                 .FirstOrDefault(s => s.UrunID == urunId && s.DepoID == 1);
 
@@ -55,9 +55,9 @@ namespace StokYonetimSistemi.Views
                 return;
             }
 
-            depoStok.Miktar -= miktar; // 🔴 ANA DEPODAN STOK DÜŞTÜ
+            depoStok.Miktar -= miktar; 
 
-            // 🔼 2) SATIŞ DEPOSUNA EKLE (DepoID = 2)
+            
             var satisStok = _context.Stok
                 .FirstOrDefault(s => s.UrunID == urunId && s.DepoID == 2);
 
@@ -75,7 +75,7 @@ namespace StokYonetimSistemi.Views
                 });
             }
 
-            // 3) SİPARİŞ DURUMUNU GÜNCELLE
+            
             var siparis = _context.Siparisler
                 .FirstOrDefault(s => s.SiparisID == siparisDetay.SiparisID);
 
@@ -86,7 +86,7 @@ namespace StokYonetimSistemi.Views
 
             _context.SaveChanges();
 
-            // 4) FATURA OLUŞTUR
+           
             var fatura = new Fatura
             {
                 SiparisID = siparis.SiparisID,
@@ -105,7 +105,7 @@ namespace StokYonetimSistemi.Views
             });
             _context.SaveChanges();
 
-            // 5) LOG
+            
             LogService.LogEkle("Siparis", "SiparisGonderildi", AktifKullanici.KullaniciID);
 
             MessageBox.Show("Sipariş başarıyla gönderildi.");
