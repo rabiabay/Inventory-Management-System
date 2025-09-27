@@ -14,18 +14,18 @@ namespace StokYonetimSistemi.Models
         public int TedarikciID { get; set; }
 
         [ForeignKey("TedarikciID")]
-        public virtual Tedarikci Tedarikci { get; set; }  // Nav property ekledik
+        public virtual Tedarikci Tedarikci { get; set; }  
 
         public DateTime Tarih { get; set; }
 
         [MaxLength(50)]
         public string Durum { get; set; }
 
-        // public int Miktar { get; set; } // Bu alanı detayda tutmak daha mantıklı, gerek yoksa kaldırabilirsin
+        
 
-        public int KullaniciID { get; set; } // Siparişi veren kullanıcı
+        public int KullaniciID { get; set; } 
 
-        // Sipariş detayları
+       
         public virtual ICollection<SiparisDetay> SiparisDetaylari { get; set; }
     }
 }

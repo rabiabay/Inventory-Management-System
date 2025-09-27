@@ -24,7 +24,7 @@
             <StackPanel>
                 <TextBlock Text="Kullanıcı Yönetimi" FontSize="24" FontWeight="Bold" Foreground="#007ACC" Margin="0 0 0 20"/>
 
-                <!-- Form -->
+                
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
                     <TextBox x:Name="txtAd" Width="150" Margin="0 0 10 0" Text="Ad" GotFocus="TextBox_GotFocus"/>
                     <TextBox x:Name="txtSoyad" Width="150" Margin="0 0 10 0" Text="Soyad" GotFocus="TextBox_GotFocus"/>
@@ -33,14 +33,14 @@
                     <ComboBox x:Name="cbRol" Width="150" Margin="0 0 10 0" DisplayMemberPath="RolAdi" SelectedValuePath="RolID"/>
                 </StackPanel>
 
-                <!-- Butonlar -->
+               
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
                     <Button Content="Ekle" Width="80" Margin="0 0 10 0" Background="#007ACC" Foreground="White" Click="BtnEkle_Click"/>
                     <Button Content="Güncelle" Width="80" Margin="0 0 10 0" Background="#28A745" Foreground="White" Click="BtnGuncelle_Click"/>
                     <Button Content="Sil" Width="80" Background="#DC3545" Foreground="White" Click="BtnSil_Click"/>
                 </StackPanel>
 
-                <!-- Liste -->
+               
                 <DataGrid x:Name="dgKullanicilar"
                           AutoGenerateColumns="False"
                           CanUserAddRows="False"

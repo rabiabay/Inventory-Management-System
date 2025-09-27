@@ -9,7 +9,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Sol Menü -->
+       
         <StackPanel Background="#2C3E50" Grid.Column="0">
             <TextBlock Text="🛠 Admin Panel" 
                        FontSize="20" 
@@ -63,7 +63,7 @@
                     Cursor="Hand"/>
         </StackPanel>
 
-        <!-- İçerik Alanı -->
+       
         <Border Grid.Column="1" Margin="20" CornerRadius="10" Background="White" 
         BorderBrush="#D0D0D0" BorderThickness="1" Padding="10">
             <Border.Effect>

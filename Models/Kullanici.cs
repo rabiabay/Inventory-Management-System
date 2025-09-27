@@ -26,5 +26,5 @@ public class Kullanici
     public bool Aktif { get; set; } = true;
 
     [MaxLength(50)]
-    public string? GorevTuru { get; set; } // ← burası eklendi ✅
+    public string? GorevTuru { get; set; } 
 }

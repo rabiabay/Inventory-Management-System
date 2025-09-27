@@ -2,7 +2,7 @@
 
 namespace StokYonetimSistemi.Models
 {
-    [Keyless] // 🔥 Burası kritik
+    [Keyless] 
     public class KritikUrun
     {
         public string UrunAdi { get; set; }

@@ -13,7 +13,7 @@ namespace StokYonetimSistemi.Models
         [Required] public int DepoID { get; set; }
 
         [Required, MaxLength(10)]
-        public string HareketTipi { get; set; } // "Giris" veya "Cikis"
+        public string HareketTipi { get; set; } 
 
         [Required]
         [Range(1, int.MaxValue)]

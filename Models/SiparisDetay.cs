@@ -13,7 +13,7 @@ namespace StokYonetimSistemi.Models
 
         public int UrunID { get; set; }
 
-        public int Miktar { get; set; } // Sipariş edilen ürün miktarı
+        public int Miktar { get; set; } 
 
         [ForeignKey("SiparisID")]
         public virtual Siparis Siparis { get; set; }

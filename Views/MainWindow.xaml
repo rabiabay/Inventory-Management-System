@@ -3,11 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Stok Yönetim Sistemi" Height="600" Width="900">
 
-    <!-- 🟢 BURASI ÖNEMLİ -->
+    
     <Grid x:Name="MainGrid">
-        <!-- Sol menü, üst bar vs. varsa buraya eklenir -->
+       
 
-        <!-- Sayfaların yükleneceği alan -->
         <ContentControl x:Name="MainContentArea" />
     </Grid>
 </Window>

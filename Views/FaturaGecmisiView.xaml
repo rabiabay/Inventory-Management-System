@@ -12,7 +12,7 @@
                 <DataGridTextColumn Header="Fatura ID" Binding="{Binding FaturaID}" Width="*" />
                 <DataGridTextColumn Header="Sipariş ID" Binding="{Binding SiparisID}" Width="*" />
                 <DataGridTextColumn Header="Tarih" Binding="{Binding Tarih}" Width="*" />
-                <!-- Ürün Adı sütunu kaldırıldı -->
+                
                 <DataGridTextColumn Header="Kullanıcı ID" Binding="{Binding KullaniciID}" Width="*" />
             </DataGrid.Columns>
         </DataGrid>

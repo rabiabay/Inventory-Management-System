@@ -12,7 +12,7 @@ namespace StokYonetimSistemi.Models
         public string? TabloAdi { get; set; }
 
         [MaxLength(20)]
-        public string? IslemTuru { get; set; } // örn: "Ekleme", "Güncelleme"
+        public string? IslemTuru { get; set; } 
 
         public int? KullaniciID { get; set; }
 

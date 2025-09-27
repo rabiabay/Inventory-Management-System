@@ -8,15 +8,15 @@
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Ürün seçimi -->
+           
             <RowDefinition Height="Auto"/>
-            <!-- Miktar -->
+          
             <RowDefinition Height="Auto"/>
-            <!-- Açıklama -->
+         
             <RowDefinition Height="Auto"/>
-            <!-- Buton -->
+          
             <RowDefinition Height="*"/>
-            <!-- Stok hareketleri -->
+          
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
@@ -35,7 +35,6 @@
         <Button Content="Satışı Onayla" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,10,0,10" Padding="10"
                 HorizontalAlignment="Center" Width="150" Height="40" Click="BtnSatisOnayla_Click"/>
 
-        <!-- Stok Hareketleri Listesi -->
         <DataGrid x:Name="dgStokHareketleri" Grid.Row="4" Grid.ColumnSpan="2" AutoGenerateColumns="False" Margin="0,10,0,0" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Ürün Adı" Binding="{Binding UrunAdi}" Width="*"/>
